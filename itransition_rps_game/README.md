@@ -1,12 +1,6 @@
-# Fake user generator
+# Rock papper scissors game
 
-## How to run a program? You must specify two command line arguments: 
+## How to run a program? 
 
-1) the number of records that the program will generate
-2) the region by which to generate users
-
-## Examples of regions that can be generated:
-
-1) en_US
-2) ru_RU
-3) uk_UA
+You must indicate the correct data (the number of participants is more than 3 and no more than 9, the number must also be odd), for example: stone, papper, scissors, lizard, spock and then choose who you are going to play for.
+If you use jar assembly, then the launch will look like this (java -jar jarfilename.jar rock paper scissors lizard spock).
