@@ -7,8 +7,6 @@ import service.validator.impl.CountArgumentsValidatorImpl;
 import service.validator.impl.CountFakersValidatorImpl;
 import service.validator.impl.RegionFakersValidatorImpl;
 
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
         try {
@@ -23,10 +21,10 @@ public class Main {
             }
 
             CsvFakerGenerator generator = new CsvFakerGenerator();
-            List<String> persons = generator.getFakersToCsvFormat(Integer.parseInt(args[0]), LocaleRegion.getLocaleRegionByName(args[1]));
 
-            for (String person: persons) {
-                System.out.println(person);
+            for (int i = 0; i < Integer.parseInt(args[0]); i++) {
+                String s = generator.getFakerToCsvFormat(LocaleRegion.getLocaleRegionByName(args[1]));
+                System.out.println(s);
             }
         } catch (IllegalArgumentException | RegionFakerException e) {
             System.out.println(e.getMessage());
